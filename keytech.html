@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices sur les Pronoms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #009900;
+        }
+        h1 {
+            color: #006600;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+        }
+        .question {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .choices {
+            list-style: none;
+            padding: 0;
+        }
+        .choices li {
+            margin: 10px 0;
+        }
+        .choices input {
+            margin-right: 10px;
+        }
+        .button-group {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-group button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #009900;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button-group button:hover {
+            background-color: #007700;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .explanation {
+            color: #444;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+        }
+        #final-score {
+            font-size: 20px;
+            color: #006600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Logo section -->
+    <div class="logo">
+        <img src="image.png" alt="Logo INSEA">
+    </div>
+
+    <h1>Exercices : Testez vos connaissances sur les pronoms</h1>
+
+    <!-- Question 1 : Identification des pronoms -->
+    <div class="question" id="question1">
+        <p>Dans la phrase suivante, identifiez le pronom et justifiez son utilisation :</p>
+        <p>« Tout semble en ordre, mais personne n'a encore vérifié les documents. »</p>
+        <ul class="choices">
+            <li><input type="radio" name="q1" value="Tout et personne, pronoms indéfinis">Tout et personne, pronoms indéfinis</li>
+            <li><input type="radio" name="q1" value="Tout et personne, pronoms démonstratifs">Tout et personne, pronoms démonstratifs</li>
+            <li><input type="radio" name="q1" value="Tout et personne, pronoms relatifs">Tout et personne, pronoms relatifs</li>
+        </ul>
+        <p class="result"></p>
+    </div>
+
+    <!-- Question 2 : Réécriture avec pronom relatif -->
+    <div class="question hidden" id="question2">
+        <p>Réécrivez la phrase suivante en utilisant un pronom relatif :</p>
+        <p>« C’est l’étudiant. Tu as corrigé son examen hier. »</p>
+        <ul class="choices">
+            <li><input type="radio" name="q2" value="C'est l'étudiant que tu as corrigé hier.">C'est l'étudiant que tu as corrigé hier.</li>
+            <li><input type="radio" name="q2" value="C'est l'étudiant dont tu as corrigé hier.">C'est l'étudiant dont tu as corrigé hier.</li>
+            <li><input type="radio" name="q2" value="C'est l'étudiant où tu as corrigé hier.">C'est l'étudiant où tu as corrigé hier.</li>
+        </ul>
+        <p class="result"></p>
+    </div>
+
+    <!-- Question 3 : Pronom adverbial -->
+    <div class="question hidden" id="question3">
+        <p>Remplacez le groupe souligné par un pronom adverbial :</p>
+        <p>« Elle se rend souvent <u>à la bibliothèque</u> pour étudier. »</p>
+        <ul class="choices">
+            <li><input type="radio" name="q3" value="Elle y va souvent pour étudier.">Elle y va souvent pour étudier.</li>
+            <li><input type="radio" name="q3" value="Elle en va souvent pour étudier.">Elle en va souvent pour étudier.</li>
+            <li><input type="radio" name="q3" value="Elle le va souvent pour étudier.">Elle le va souvent pour étudier.</li>
+        </ul>
+        <p class="result"></p>
+    </div>
+
+    <!-- Question 4 : Pronom possessif -->
+    <div class="question hidden" id="question4">
+        <p>Complétez avec le bon pronom possessif :</p>
+        <p>« C'est le livre de HICHAM, mais je ne trouve pas ________ . »</p>
+        <ul class="choices">
+            <li><input type="radio" name="q4" value="le sien">le sien</li>
+            <li><input type="radio" name="q4" value="le tien">le tien</li>
+            <li><input type="radio" name="q4" value="le mien">le mien</li>
+        </ul>
+        <p class="result"></p>
+    </div>
+
+    <!-- Question 5 : Correction des erreurs -->
+    <div class="question hidden" id="question5">
+        <p>Corrigez les erreurs de pronoms dans cette phrase :</p>
+        <p>« Chacun doivent donner leur avis sur le projet. »</p>
+        <ul class="choices">
+            <li><input type="radio" name="q5" value="Chacun doit donner son avis sur le projet.">Chacun doit donner son avis sur le projet.</li>
+            <li><input type="radio" name="q5" value="Chacun doit donner leur avis sur le projet.">Chacun doit donner leur avis sur le projet.</li>
+            <li><input type="radio" name="q5" value="Chacun doivent donner son avis sur le projet.">Chacun doivent donner son avis sur le projet.</li>
+        </ul>
+        <p class="result"></p>
+    </div>
+
+    <!-- Final score page -->
+    <div class="question hidden" id="final-page">
+        <h2>Résultats du quiz</h2>
+        <p id="final-score"></p>
+        <p id="final-message"></p>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="button-group">
+        <button id="prev" onclick="navigate(-1)" disabled>Précédent</button>
+        <button id="next" onclick="handleSubmit()">Continuer</button>
+    </div>
+
+    <!-- Footer with creator names -->
+    <footer>
+        <p>Réalisé par Zouhair Akhatar & Issam Legssair</p>
+    </footer>
+</div>
+
+<script>
+    let currentQuestion = 1;
+    const totalQuestions = 5;
+    let score = 0;
+    let hasSubmitted = false;
+
+    function navigate(direction) {
+        document.getElementById(`question${currentQuestion}`).classList.add('hidden');
+        currentQuestion += direction;
+        hasSubmitted = false;
+        document.getElementById('next').textContent = 'Continuer';
+        document.getElementById(`question${currentQuestion}`).classList.remove('hidden');
+        document.getElementById('prev').disabled = (currentQuestion === 1);
+        if (currentQuestion === totalQuestions && hasSubmitted) {
+            document.getElementById('next').textContent = 'Terminer';
+        }
+    }
+
+    function handleSubmit() {
+        const selectedAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        if (!selectedAnswer) {
+            alert("Veuillez sélectionner une réponse avant de continuer.");
+            return;
+        }
+
+        if (!hasSubmitted) {
+            checkAnswer();
+        } else if (currentQuestion < totalQuestions) {
+            navigate(1);
+        } else {
+            showFinalScore();
+        }
+    }
+
+    function checkAnswer() {
+        const correctAnswers = {
+            1: 'Tout et personne, pronoms indéfinis',
+            2: 'C\'est l\'étudiant que tu as corrigé hier.',
+            3: 'Elle y va souvent pour étudier.',
+            4: 'le sien',
+            5: 'Chacun doit donner son avis sur le projet.'
+        };
+        const explanations = {
+            1: 'Les pronoms "Tout" et "Personne" sont des pronoms indéfinis car ils désignent quelque chose ou quelqu’un de manière vague.',
+            2: 'On utilise "que" pour relier la proposition avec "l’étudiant".',
+            3: 'Le pronom "y" remplace un lieu (à la bibliothèque).',
+            4: 'Le pronom possessif "le sien" fait référence à un objet appartenant à Jean.',
+            5: 'Le pronom "Chacun" est singulier, donc on doit dire "doit" et utiliser "son avis".'
+        };
+
+        const selectedAnswer = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+        const resultElement = document.querySelector(`#question${currentQuestion} .result`);
+
+        if (selectedAnswer.value === correctAnswers[currentQuestion]) {
+            resultElement.textContent = "Bravo ! Bonne réponse.";
+            resultElement.classList.add('correct');
+            resultElement.classList.remove('incorrect');
+            score++;
+        } else {
+            resultElement.innerHTML = `Mauvaise réponse. ${explanations[currentQuestion]}`;
+            resultElement.classList.add('incorrect');
+            resultElement.classList.remove('correct');
+        }
+
+        document.getElementById('next').textContent = 'Suivant';
+        hasSubmitted = true;
+    }
+
+    function showFinalScore() {
+        document.getElementById(`question${currentQuestion}`).classList.add('hidden');
+        document.getElementById('final-page').classList.remove('hidden');
+
+        const finalScoreElement = document.getElementById('final-score');
+        const finalMessageElement = document.getElementById('final-message');
+
+        finalScoreElement.textContent = `Votre score est de ${score} sur ${totalQuestions}.`;
+
+        if (score === totalQuestions) {
+            finalMessageElement.textContent = "Très bien ! Vous avez réussi toutes les questions.";
+        } else if (score >= 3) {
+            finalMessageElement.textContent = "Bon travail, vous avez obtenu un score moyen.";
+        } else {
+            finalMessageElement.textContent = "Vous avez besoin de plus de pratique. Ne vous découragez pas !";
+        }
+    }
+</script>
+
+</body>
+</html>

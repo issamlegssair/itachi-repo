@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../effet disigne"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "k"
+	}
+}
